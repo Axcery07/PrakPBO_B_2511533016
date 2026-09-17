@@ -34,7 +34,7 @@ public class Rekening {
 	}
 		
 	public void tarikTunai(double nominal) {
-		if (nominal <= 10000 && nominal <= saldo) {
+		if (nominal >= 10000 && nominal <= saldo) {
 			saldo -= nominal;
 			String idTrx = "TRX-T-" + System.currentTimeMillis();
 			Transaksi trxBaru = new Transaksi(idTrx, "Debit", nominal);
